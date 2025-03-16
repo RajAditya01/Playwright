@@ -1,18 +1,17 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
 
-/**
- * @see https://playwright.dev/docs/test-configuration
- */
 export default defineConfig({
-  testDir: './tests',
-  timeout:40*1000,
-  expect:{
-    timeout:40*1000,
+  testDir: './tests', // Directory for test files
+
+  timeout: 40 * 1000, // Global timeout for each test
+
+  expect: {
+    timeout: 40 * 1000, // Timeout for assertions
   },
 
   use: {
-    browserName:'chromium'
+    browserName: 'chromium', // Use Chromium browser
+    headless: true, // Run tests in headless mode (set to false for UI mode)
   },
 });
-
