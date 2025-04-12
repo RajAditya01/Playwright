@@ -47,3 +47,9 @@ test("@Web Client App login", async ({ page }) => {
     const titles = await page.locator(".card-body b").allTextContents();
     console.log(titles);
 });
+
+
+test.only('UI Controls', async ({page})=>{
+    await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
+    const username = page.locator('#username');
+});
